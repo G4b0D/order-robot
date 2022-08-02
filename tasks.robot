@@ -23,7 +23,7 @@ Order robots from RobotSpareBin Industries Inc
         Click modal button
         Fill the form    ${row}
         Preview the robot
-        Wait Until Keyword Succeeds    3x    1.5s    Submit the order
+        Wait Until Keyword Succeeds    3x    3s    Submit the order
         ${pdf}=    Store the receipt as a PDF file    ${row}[Order number]
         ${screenshot}=    Take a screenshot of the robot    ${row}[Order number]
         Embed the robot screenshot to the receipt PDF file    ${screenshot}    ${pdf}
@@ -40,11 +40,11 @@ Salutation
 
 
 Log Secret
-    ${secret}=    Get Secret    order-robot
+    ${secret}=    Get Secret    orderrobot
     Log    ${secret}[message]
 
 Open the robot order website
-    Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+    Open Available Browser    https://robotsparebinindustries.com/#/robot-order    maximized=True
     
 Click modal button
     Click Element If Visible    css:#root > div > div.modal > div > div > div > div > div > button.btn.btn-dark
