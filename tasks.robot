@@ -37,6 +37,7 @@ Salutation
     Add heading    Input your name
     Add text input    Your Name    label=Your Name
     ${result}=    Run dialog
+    Log    ${result}
 
 
 Log Secret
