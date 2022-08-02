@@ -15,3 +15,7 @@ temp/
 testrun/*
 .~lock*
 *.pkl
+receipts/*
+screenshots/*
+*.rar
+*.csv
